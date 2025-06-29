@@ -1,0 +1,49 @@
+1. Where we use AND , OR , NOT in react js ?
+
+
+-> || (logical OR) can be used to: 
+
+  1. Set Default Fallback Values (Conditional Rendering)
+    const name = user.name || 'Guest';
+
+  2. Render Default JSX Elements
+   return (
+    <div>
+      {message || <p>No message found</p>}
+    </div>
+   ); 
+  
+  If message is falsy, <p>No message found</p> will render.
+
+  3. With Objects for Mapping JSX
+
+   const views = {
+     home: <Home />,
+     about: <About />,
+  };
+
+  return views[currentPage] || <NotFound />;
+
+ 
+-> Using && — Render JSX Only When a Condition Is True
+
+function AlertBox({ show }) {
+  return (
+    <div>
+      {show && <div className="alert">This is an alert box</div>}
+    </div>
+  );
+}
+
+
+
+Q. Difference between 
+
+ | Code              | Use When...                                      | Example Use Case                    |
+| ----------------- | ------------------------------------------------ | ----------------------------------- |
+| `{renderValue()}` | You want to **call a function** that returns JSX | Conditional rendering, calculations |
+| `{renderValue}`   | You want to **insert a variable or component**   | JSX in a variable, passing props    |
+
+    
+
+  
