@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import User from "./components/User";
 import Props from "./components/Props";
 import Input from "./components/Input";
@@ -10,39 +10,48 @@ import NestedLoop from "./components/NestedLoop";
 import Hooks from "./components/Hooks";
 import HooksEffect from "./components/HooksEffect";
 import DyanmicStyle from "./components/Dyanmic-Style/DyanmicStyle";
+import RefHook from "./components/RefHook";
+import UseFormStatus from "./components/UseFormStatus";
+import UseFormStatus2 from "./components/UseFormStatus2";
+import Derived from "./components/Derived";
+import ShallowDeepCopy from "./components/ShallowDeepCopy";
+import ExampleDeepVsShallow from "./components/ExampleDeepVsShallow";
+import UpdateObject from "./components/UpdateObject";
+import UpdateArray from "./components/UpdateArray";
+import UseActionHook from "./components/UseActionHook";
 
 export default function App() {
-  const [value, setValue] = useState(true);
-  const [count, setCount] = useState(0);
+  // const [value, setValue] = useState(true);
+  // const [count, setCount] = useState(0);
 
   // Best way use object mapping or use switch case
   // This is object mapping
-  const Condition = {
-    0: <h1>Condition 0</h1>,
-    1: <h1>Condition 1</h1>,
-    2: <h1>Condition 2</h1>,
-    3: <h1>Condition 3</h1>,
-    4: <h1>Condition 4</h1>,
-  };
+  // const Condition = {
+  //   0: <h1>Condition 0</h1>,
+  //   1: <h1>Condition 1</h1>,
+  //   2: <h1>Condition 2</h1>,
+  //   3: <h1>Condition 3</h1>,
+  //   4: <h1>Condition 4</h1>,
+  // };
 
 
   // use switch case
-  const renderValue = () => {
-    switch (count) {
-      case 0:
-        return <h1>Condition 0</h1>;
-      case 1:
-        return <h1>Condition 1</h1>;
-      case 2:
-        return <h1>Condition 2</h1>;
-      case 3:
-        return <h1>Condition 3</h1>;
-      case 4:
-        return <h1>Condition 4</h1>;
-      default:
-        return <h1>Others Condtions</h1>;
-    }
-  };
+  // const renderValue = () => {
+  //   switch (count) {
+  //     case 0:
+  //       return <h1>Condition 0</h1>;
+  //     case 1:
+  //       return <h1>Condition 1</h1>;
+  //     case 2:
+  //       return <h1>Condition 2</h1>;
+  //     case 3:
+  //       return <h1>Condition 3</h1>;
+  //     case 4:
+  //       return <h1>Condition 4</h1>;
+  //     default:
+  //       return <h1>Others Condtions</h1>;
+  //   }
+  // };
 
   return (
     <div className="text-center">
@@ -78,14 +87,23 @@ export default function App() {
         {/* Props */}
         {/* <Props/> */}
         {/* <Input/> */}
-        <Skills/>
+        {/* <Skills/> */}
           {/* <Skills2/> */}
-          <RadioSelect/>
+          {/* <RadioSelect/>
           <Clock/>
           <NestedLoop/>
           <Hooks/>
           <HooksEffect/>
-          <DyanmicStyle/>
+          <DyanmicStyle/> */}
+          {/* <RefHook/> */}
+          {/* <UseFormStatus/> */}
+          {/* <UseFormStatus2/> */}
+          {/* <Derived/> */}
+          {/* <ShallowDeepCopy/> */}
+          {/* <ExampleDeepVsShallow/> */}
+          {/* <UpdateObject/> */}
+          <UpdateArray/>
+          <UseActionHook/>
       </div>
     </div>
   );
