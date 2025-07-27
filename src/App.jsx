@@ -18,7 +18,11 @@ import ShallowDeepCopy from "./components/ShallowDeepCopy";
 import ExampleDeepVsShallow from "./components/ExampleDeepVsShallow";
 import UpdateObject from "./components/UpdateObject";
 import UpdateArray from "./components/UpdateArray";
-import UseActionHook from "./components/UseActionHook";
+import UseActionStateHook from "./components/UseActionStateHook";
+import CustomHook from "./components/CustomHook/CustomHook";
+import Counter from "./components/ContextApi/Counter/Counter";
+import Cart from "./components/ContextApi/CartContext/Cart";
+import AppRoute from "./components/Router/Routes/AppRoute";
 
 export default function App() {
   // const [value, setValue] = useState(true);
@@ -33,7 +37,6 @@ export default function App() {
   //   3: <h1>Condition 3</h1>,
   //   4: <h1>Condition 4</h1>,
   // };
-
 
   // use switch case
   // const renderValue = () => {
@@ -54,7 +57,8 @@ export default function App() {
   // };
 
   return (
-    <div className="text-center">
+    <>
+      <div className="text-center">
       {/* <h1 className="text-2xl font-semibold text-center mt-3">
         Hide and Show or Toggle Functionality
       </h1>
@@ -68,43 +72,45 @@ export default function App() {
 
       {/* User multiple conditons - Best way use object mapping or use switch case*/}
 
-      <div>
+      {/* Use object mapping */}
+      {/* <h2>{count}</h2> */}
 
-        {/* Use object mapping */}
-        {/* <h2>{count}</h2> */}
-
-        {/* Button and count value are same call for both cases */}
-        {/* <button
+      {/* Button and count value are same call for both cases */}
+      {/* <button
           className="btn border my-4 border-none bg-green-500 text-white p-3 rounded-md"
           onClick={() => setCount((prev) => prev + 1)}
         >Counting</button>
         {Condition[count] || <h1>Others Conditons</h1>} */}
 
-
-        {/* Use Switch case render */}
-        {/* <h4>{renderValue ()}</h4> */}
-
-        {/* Props */}
-        {/* <Props/> */}
-        {/* <Input/> */}
-        {/* <Skills/> */}
-          {/* <Skills2/> */}
-          {/* <RadioSelect/>
+      {/* Use Switch case render */}
+      {/* <h4>{renderValue ()}</h4> */}
+      </div>
+      
+      {/* Props */}
+      {/* <Props/> */}
+      {/* <Input/> */}
+      {/* <Skills/> */}
+      {/* <Skills2/> */}
+      {/* <RadioSelect/>
           <Clock/>
           <NestedLoop/>
           <Hooks/>
           <HooksEffect/>
           <DyanmicStyle/> */}
-          {/* <RefHook/> */}
-          {/* <UseFormStatus/> */}
-          {/* <UseFormStatus2/> */}
-          {/* <Derived/> */}
-          {/* <ShallowDeepCopy/> */}
-          {/* <ExampleDeepVsShallow/> */}
-          {/* <UpdateObject/> */}
-          <UpdateArray/>
-          <UseActionHook/>
-      </div>
-    </div>
+      {/* <RefHook/> */}
+      {/* <UseFormStatus/> */}
+      {/* <UseFormStatus2/> */}
+      {/* <Derived/> */}
+      {/* <ShallowDeepCopy/> */}
+      {/* <ExampleDeepVsShallow/> */}
+      {/* <UpdateObject/> */}
+      {/* <UpdateArray/> */}
+      {/* <UseActionStateHook/> */}
+      {/* <CustomHook/> */}
+      {/* <Counter/> */}
+      {/* <Cart /> */}
+      
+      <AppRoute/>
+    </>
   );
 }

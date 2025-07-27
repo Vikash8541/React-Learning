@@ -1,0 +1,18 @@
+// List of All Hooks that is necessary
+
+
+| Hook                  | Purpose                                                                          | When to Use                                               | Simple Example                                                |
+| --------------------- | -------------------------------------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------------------- |
+| `useState`            | Manage local state in components                                                 | Any time you need to store and update a value             | `const [count, setCount] = useState(0)`                       |
+| `useEffect`           | Run side effects (e.g. API calls, timers)                                        | After render or when dependencies change                  | `useEffect(() => { fetchData() }, [])`                        |
+| `useRef`              | Get a reference to a DOM element or store a mutable value that doesn’t re-render | For focusing inputs, timers, tracking previous values     | `const inputRef = useRef(null)`                               |
+| `useContext`          | Share data globally without prop drilling                                        | For global themes, auth, user settings                    | `const value = useContext(MyContext)`                         |
+| `useReducer`          | Alternative to `useState` for complex state logic                                | For counters, forms, multi-step flows                     | `const [state, dispatch] = useReducer(reducer, initialState)` |
+| `useId`               | Generate a unique ID (for accessibility or form fields)                          | For linking `<label>` to `<input>` in reusable components | `const id = useId()`                                          |
+| `useMemo`             | Cache the result of a computation to avoid unnecessary re-calculations           | For expensive calculations in render                      | `const result = useMemo(() => compute(data), [data])`         |
+| `useCallback`         | Memoize a function to avoid unnecessary re-renders                               | When passing functions to child components                | `const handleClick = useCallback(() => doSomething(), [])`    |
+| `useLayoutEffect`     | Like `useEffect` but fires before painting                                       | Rare — only if you need to measure layout immediately     | `useLayoutEffect(() => { ... })`                              |
+| `useImperativeHandle` | Expose a custom API when using `forwardRef`                                      | For reusable component libraries or custom input APIs     | (Advanced)                                                    |
+
+
+

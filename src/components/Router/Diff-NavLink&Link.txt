@@ -1,0 +1,59 @@
+Q. Difference between "NavLink" and "Link" in react Dom ?
+
+Reply:
+
+- Use Link when you only need to navigate.
+- Use NavLink when you also need to style the active link.
+
+
+| Feature             | `Link`                    | `NavLink`                                        |
+| ------------------- | ------------------------- | ------------------------------------------------ |
+| Basic navigation    | ✅ Yes                     | ✅ Yes                                            |
+| Styling active link | ❌ No (manual)             | ✅ Yes (auto adds `active` class or custom class) |
+| Use case            | Navigate to another route | Navigation + Highlight the active link           |
+
+
+
+Example :
+
+1. Link Example
+
+import { Link } from 'react-router-dom';
+
+<Link to="/about">About</Link>
+
+
+
+2. NavLink Example
+
+import { NavLink } from 'react-router-dom';
+
+// Here NavLink provide by default "active" class , when those nav is active.
+You can change the class of "active" to any class or css. Here below example
+
+
+=> "Add CSS"
+
+<NavLink
+  to="/about"
+  className={({ isActive }) =>
+    isActive ? 'text-blue-500 font-bold' : 'text-gray-600'
+  }
+>
+  About
+</NavLink>
+
+
+=> Add Custom class
+
+Here link is by default class if you want to add , and custom nav is custom class for the css style.
+
+<NavLink
+  to="/about"
+  className={({ isActive }) =>
+    isActive ? 'link custom-nav ' : 'link'
+  }
+>
+  About
+</NavLink>
+
