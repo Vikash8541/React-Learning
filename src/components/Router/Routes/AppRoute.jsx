@@ -7,7 +7,7 @@ import Layout from "../Components/Layout";
 import Error from "../Pages/Error";
 import BlogPage from "../Pages/BlogPage";
 import SingleBlog from "../Pages/SingleBlog";
-import User from "../../../Api/User";
+import User from "../Pages/User";
 
 const AppRoute = () => {
   return (
